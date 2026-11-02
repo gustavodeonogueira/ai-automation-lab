@@ -1,16 +1,100 @@
+
 ---
+const nome = "Gustavo Nogueira";
+const especialidade = "AI Automation & Integrations";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{nome} | AI Automation Lab</title>
+  </head>
+
+  <body>
+    <main>
+      <p>Olá, eu sou</p>
+      <h1>{nome}</h1>
+      <h2>{especialidade}</h2>
+
+      <p>
+        Desenvolvo automações inteligentes,
+        agentes de IA e integrações entre sistemas.
+      </p>
+	  <p> Studying Python and AI Engineer!!! </p>
+      <a href="https://github.com/gustavodeonogueira">
+        Conheça meu GitHub
+      </a>
+	  
+		<section class="projetos">
+		<h2>Projetos e casos reais</h2>
+
+		<article>
+			<h3>AI Smart Scheduling</h3>
+			<p>
+			Automação de agendamentos com agentes de IA,
+			n8n e Google Calendar.
+			</p>
+		</article>
+
+		<article>
+			<h3>WhatsApp AI Customer Service</h3>
+			<p>
+			Atendimento automatizado com IA,
+			Evolution API e integração com n8n.
+			</p>
+		</article>
+		</section>
+
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    background: #101018;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 56px;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    color: #00d4ff;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  a {
+    color: #b28cff;
+  }
+
+.projetos {
+  margin-top: 80px;
+}
+
+.projetos article {
+  background: #1d1d2b;
+  padding: 24px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 1px solid #35354a;
+}
+
+.projetos h3 {
+  color: #00d4ff;
+}
+
+</style>
