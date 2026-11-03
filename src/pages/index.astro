@@ -1,5 +1,7 @@
 
 ---
+import ProjectCard from "../components/ProjectCard.astro";
+
 const nome = "Gustavo Nogueira";
 const especialidade = "AI Automation & Integrations";
 ---
@@ -19,10 +21,10 @@ const especialidade = "AI Automation & Integrations";
 
       <p>
         Developing smart automizations ,
-		AI Agents and Integration systems.
+		AI Agents and System integrations.
 	  <h2>WELCOME TO MY AI AUTOMATION LAB</h2>
       </p>
-	  <p> Studying Python and AI Engineer!!! </p>
+	  <p> Curently Studying Python and AI Engineering!!! </p>
       <a href="https://github.com/gustavodeonogueira">
          See my GitHub profile
       </a>
@@ -30,33 +32,26 @@ const especialidade = "AI Automation & Integrations";
 		<section class="projetos">
 		<h2>Projects and Real Cases</h2>
 
-		<article>
-			<h3>AI Smart Scheduling</h3>
-			<p>
-			Automization and scheduling with AI agents,
-			n8n and Google Calendar.
-			</p>
-		</article>
+		
+		<ProjectCard
+		title="AI Smart Scheduling"
+		description="AI-powered appointment scheduling with n8n and Google Calendar."
+		/>
 
-		<article>
-			<h3>WhatsApp AI Customer Service</h3>
-			<p>
-			Automization and scheduling with AI agents,
-			n8n and WhatsApp API.
-			</p>
-		</article>
+		<ProjectCard
+		title="WhatsApp AI Customer Service"
+		description="AI-powered customer service with WhatsApp, Evolution API, and n8n."
+		/>
 
-		<article>
-			<h3>Workflow Reability</h3>
-			<p>
-			We developed workflows to make agentes without loops and keep improving themselfs
-			</p>
-		</article>
+		<ProjectCard
+		title="AI Workflow Reliability"
+		description="Improving AI workflow reliability through loop prevention and error handling."
+		/>
 		</section>
 
-    </main>
-  </body>
-</html>
+    	</main>
+  		</body>
+		</html>
 
 <style>
   body {
@@ -91,18 +86,6 @@ const especialidade = "AI Automation & Integrations";
 
 .projetos {
   margin-top: 80px;
-}
-
-.projetos article {
-  background: #1d1d2b;
-  padding: 24px;
-  margin-top: 20px;
-  border-radius: 20px;
-  border: 1px solid #35354a;
-}
-
-.projetos h3 {
-  color: #00d4ff;
 }
 
 </style>

@@ -1,0 +1,32 @@
+
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<article class="project-card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+</article>
+
+<style>
+  .project-card {
+    background: #1d1d2b;
+    padding: 24px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid #35354a;
+  }
+
+  h3 {
+    color: #00d4ff;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+</style>
