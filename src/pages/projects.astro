@@ -1,0 +1,60 @@
+
+---
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Projects | Gustavo Nogueira</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <h1>Projects & Case Studies</h1>
+
+      <p>
+        Real-world experiences in AI automation,
+        intelligent workflows, and API integrations.
+      </p>
+
+      <ProjectCard
+        title="AI Smart Scheduling"
+        description="AI-powered scheduling with n8n and Google Calendar."
+      />
+
+      <ProjectCard
+        title="WhatsApp AI Customer Service"
+        description="AI-powered customer support with WhatsApp and Evolution API."
+      />
+
+      <ProjectCard
+        title="AI Workflow Reliability"
+        description="Improving automation reliability through loop prevention and error handling."
+      />
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background: #101018;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 24px;
+  }
+
+  h1 {
+    color: #00d4ff;
+  }
+</style>
