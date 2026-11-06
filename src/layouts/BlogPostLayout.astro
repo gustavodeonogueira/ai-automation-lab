@@ -1,0 +1,93 @@
+
+---
+import Header from "../components/Header.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content={frontmatter.description}
+    />
+    <title>{frontmatter.title} | Gustavo Nogueira</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <a href="/blog">← Back to Blog</a>
+
+      <h1>{frontmatter.title}</h1>
+      <p class="description">{frontmatter.description}</p>
+      <small>By {frontmatter.author}</small>
+
+      <hr />
+
+      <article>
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    margin: 0;
+    background: #101018;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    color: #00d4ff;
+    margin-top: 40px;
+  }
+
+  .description {
+    color: #b9b9c8;
+  }
+
+  a {
+    color: #b28cff;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #35354a;
+    margin: 32px 0;
+  }
+
+  article {
+    overflow-wrap: break-word;
+  }
+
+  article code {
+    background: #252538;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+
+  article pre {
+    background: #1d1d2b;
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+</style>
