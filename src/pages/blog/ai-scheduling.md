@@ -30,14 +30,20 @@ the workflow with Google Calendar.
 4. Google Calendar is consulted for availability.
 5. After confirmation, the appointment is registered.
 
-## A Real Challenge
+## A Real Challenge — How I Debugged the Scheduling Problem
 
-During testing, an appointment was scheduled
-at 8:30 AM, although appointments should
-only begin at 9:00 AM.
+The clinic's team started its activities at 8:30 AM, but appointments were only supposed to be scheduled between 9:00 AM and 5:00 PM.
 
-This highlighted the importance of validating
-business rules independently of AI instructions.
+During testing, we identified an issue with the AI scheduling agent. It was occasionally booking appointments outside the allowed hours, including appointments before 9:00 AM and at 6:00 PM.
+
+To address this issue, I updated the agent's prompt by adding specific scheduling rules.
+
+One of the most important changes was instructing the agent to recognize requests outside the permitted scheduling hours.
+
+For example, when a customer requested an appointment before 9:00 AM, the agent was instructed to politely explain that appointments started at 9:00 AM and suggest an available time within the allowed schedule.
+
+This experience helped me understand how important clear instructions and business rules are when building AI-powered automation workflows.
+
 
 ## Lessons Learned
 
@@ -50,3 +56,7 @@ enforced by deterministic application logic.
 - Strengthen automated testing
 - Improve input validation
 - Explore implementation with Python and FastAPI
+- A reliable AI automation system should not depend
+only on prompt instructions.
+- Critical business rules must also be validated
+by the workflow before executing an action.
